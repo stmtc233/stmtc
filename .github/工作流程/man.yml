@@ -1,0 +1,9 @@
+apt install speedtest-cli
+speedtest
+sudo apt-get install git gcc make libpcap-dev
+git clone https://github.com/robertdavidgraham/masscan
+cd masscan
+make
+make install
+cd bin
+masscan 0.0.0.0/0 -p 3389 -oX ip.txt --rate 10000000 --exclude 255.255.255.255
